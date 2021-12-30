@@ -10,7 +10,7 @@ pipeline {
 			
 		stage('build && SonarQube analysis') {
       tools{
-			    jdk "JDK 11"
+			    jdk "JDK 8"
 		    }
             steps {
 		    script {
