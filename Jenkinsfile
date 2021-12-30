@@ -1,13 +1,9 @@
 pipeline {
     environment {
-imagename = "nagp_devops_3149268"
-dockerImage = ''
 }
     agent any
 
     tools {
-        // Install the Maven version configured as "M3" and add it to the path.
-        maven "M3"
     }
 
     stages {
@@ -19,9 +15,6 @@ dockerImage = ''
             }
 			
 		stage('build && SonarQube analysis') {
-			tools{
-			    jdk "JDK 11"
-		    }
             steps {
 		    script {
             scannerHome = tool 'SQ';
