@@ -1,11 +1,5 @@
 pipeline {
-    environment {
-}
     agent any
-
-    tools {
-    }
-
     stages {
         stage('Clone sources') {
             steps {
