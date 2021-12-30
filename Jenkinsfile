@@ -9,6 +9,9 @@ pipeline {
             }
 			
 		stage('build && SonarQube analysis') {
+      tools{
+			    jdk "JDK 11"
+		    }
             steps {
 		    script {
             scannerHome = tool 'SQ';
