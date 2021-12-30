@@ -15,12 +15,12 @@ pipeline {
             steps {
 		    script {
             scannerHome = tool 'SQ';
-            bat "npm install"
+            sh "npm install"
         }
 		            
                 withSonarQubeEnv(credentialsId: '96785c03-6f43-4550-988b-c731513ff460', installationName: 'SQI') {
                     // Optionally use a Maven environment you've configured already
-                    bat """
+                    sh """
                         ${scannerHome}/bin/sonar-scanner \
                         -D sonar.projectKey=angular-starter \
                         -D sonar.projectName=angular-starter \
