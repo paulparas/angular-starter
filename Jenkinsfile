@@ -94,7 +94,7 @@ pipeline {
             echo 'I will always say Hello again!'
         }
 		success {
-      			build job: 'Automation Suite'
+      			//build job: 'Automation Suite'
     		}
     	}
     }
